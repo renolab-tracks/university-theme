@@ -3,6 +3,7 @@
 
 // define('SITE_URL', bloginfo('url'));
 define('THEME_DIR', get_template_directory_uri());
+require 'inc/posttypes.php';
 
 
 
@@ -60,7 +61,7 @@ add_filter('the_content', 'filter_the_content_in_the_main_loop', 1);
 function filter_the_content_in_the_main_loop($content)
 {
 
-    return $content;
+    return $content.'asadasd';
 }
 
 function getString()
@@ -68,3 +69,12 @@ function getString()
 
     return 'getString';
 }
+
+
+
+
+
+function register_my_menu() {
+    register_nav_menu('header-menu',__( 'Header Menu' ));
+  }
+  add_action( 'init', 'register_my_menu' );

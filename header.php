@@ -9,5 +9,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php the_custom_logo(); ?>
-    <hr />
+   
+<?php require 'components/navbar.php' ?>
